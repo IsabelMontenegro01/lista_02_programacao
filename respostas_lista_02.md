@@ -26,11 +26,12 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime `false`, calcula o produto dos números na lista e imprime o resultado no console.
+O resultado será true se:<br>
+i) O resto da divisão de p por q for 1 e r * 2 for maior que p, ou<br>
+ii) A soma de q + r for menor que p.
+Então, como o resto de 10/3 é 1 e, 12 > 10, a expressão imprime true.
 
-C) O código avalia a expressão booleana, imprime `true` e, em seguida, verifica se o número 6 está na lista.
-
-D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
+Além disso, na segunda parte, o código calcula o produto de todos os números do array. Percorre cada elemento do array e multiplica o produto atual pelo elemento.
 
 
 ______
@@ -88,11 +89,10 @@ Se ambas as funções forem executadas com os valores fornecidos, qual será a s
 
 A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
 
-B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
+Justificativa: <br>
+O while verifica a condição antes de executar, mas como totalCompras começa em 2500 (dentro do limite), ambas as funções somam todos os valores do array (4600) e calculam o saldo (400), mantendo o status "aprovado".
 
-C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
-
-D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
+O do...while executa pelo menos uma vez antes de verificar a condição, mas no caso específico desse código, isso não altera o resultado.
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -110,13 +110,10 @@ if (idade >= 18 && idade < 60) {
 ```
 Qual das seguintes alternativas melhor descreve o comportamento do código?
 
-A) O código verifica se a idade indica um adulto ou um idoso e exibe a mensagem correspondente.
-
 B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".
 
-C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
+Justificativa: <br>
 
-D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?
@@ -144,36 +141,6 @@ for (var i = 0; i < consumoDispositivos.length; i++) {
 
 Escolha a opção que responde corretamente:
 
-A)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 ligado com bateria extra. Energia restante: 0
-
-Dispositivo 5 ligado. Energia restante: -200
-
-B)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 200
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
-
-Dispositivo 5 não pode ser ligado. Energia insuficiente.
-
-C)
-Dispositivo 1 ligado. Energia restante: 900
-
-Dispositivo 2 ligado com bateria extra. Energia restante: 700
-
-Dispositivo 3 ligado. Energia restante: 400
-
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 D)
 Dispositivo 1 ligado. Energia restante: 900
@@ -186,19 +153,46 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
+Justificativa: <br>
+
+-Dispositivo 1 (consumo = 300)
+energiaDisponivel = 1200
+Energia suficiente → energiaDisponivel -= 300 = 900
+Saída: "Dispositivo 1 ligado. Energia restante: 900"
+
+-Dispositivo 2 (consumo = 600)
+energiaDisponivel = 900
+Energia suficiente → energiaDisponivel -= 600 = 300
+Saída: "Dispositivo 2 ligado. Energia restante: 300"
+
+-Dispositivo 3 (consumo = 500)
+energiaDisponivel = 300, bateria extra = 400
+Usa bateria extra → (300 + 400) - 500 = 200
+energiaDisponivel = 0, bateriaExtra = 200
+Saída: "Dispositivo 3 ligado com bateria extra. Energia restante: 200"
+
+-Dispositivo 4 (consumo = 200)
+energiaDisponivel = 0, bateriaExtra = 200
+Usa bateria extra → bateriaExtra -= 200 = 0
+Saída: "Dispositivo 4 ligado com bateria extra. Energia restante: 0"
+
+-Dispositivo 5 (consumo = 400)
+energiaDisponivel = 0, bateriaExtra = 0
+Energia insuficiente
+Saída: "Dispositivo 5 não pode ser ligado. Energia insuficiente."
+
 ______
 
 **5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
 
 Escolha a opção que melhor descreve seu propósito:
 
-A) O método update() é responsável por carregar os assets do jogo antes da cena ser exibida.
-
 B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
 
-C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
 
-D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
+Justificativa: <br>
+
+O update() não carrega assets (isso ocorre no preload()). Além disso, ele não é chamado apenas uma vez (diferente do create(), que configura o jogo).
 ______
 
 **6)** Qual é o principal objetivo do módulo Matter.js Physics em Phaser.js?
@@ -207,11 +201,9 @@ Escolha a opção que responde corretamente:
 
 A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
 
-B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, permitindo movimentação de personagens.
+Justificativa: <br>
 
-C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros estável.
-
-D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
+Matter.js não lida com eventos de entrada do usuário, não é um motor gráfico e não é um sistema de animação automática, e sim, para simular colisões
 
 ______
 
@@ -228,6 +220,23 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
+
+Resposta: <br>
+
+INÍCIO
+    DECLARE valorTotal: REAL
+    
+    ESCREVA "Digite o valor total da compra:"
+    LEIA valorTotal
+    
+    SE valorTotal < 50.00 ENTÃO
+        ESCREVA "Frete não disponível!"
+    SENÃO SE valorTotal >= 50.00 E valorTotal <= 199.99 ENTÃO
+        ESCREVA "Frete com custo adicional!"
+    SENÃO
+        ESCREVA "Frete grátis!"
+    FIM SE
+FIM
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
@@ -245,6 +254,59 @@ Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+Resposta: <br>
+
+CLASSE Veiculo
+    ATRIBUTOS:
+        modelo
+        ano
+
+    MÉTODO Construtor(modelo, ano)
+        SELF.modelo ← modelo
+        SELF.ano ← ano
+
+    MÉTODO CalcularConsumo(km, eficiencia)
+        ESCREVER "Método genérico. Deve ser sobrescrito nas subclasses."
+FIM CLASSE
+
+// Classe Carro herdando de Veiculo
+CLASSE Carro HERDA Veiculo
+    ATRIBUTOS:
+        capacidadeTanque  // Capacidade do tanque em litros
+
+    MÉTODO Construtor(modelo, ano, capacidadeTanque)
+        CHAMAR SUPER(modelo, ano)
+        SELF.capacidadeTanque ← capacidadeTanque
+
+    MÉTODO CalcularConsumo(km, eficiencia)
+        consumo ← km / eficiencia
+        ESCREVER "O carro consumiu ", consumo, " litros de combustível."
+FIM CLASSE
+
+// Classe Moto herdando de Veiculo
+CLASSE Moto HERDA Veiculo
+    ATRIBUTOS:
+        tipoMotor  
+
+    MÉTODO Construtor(modelo, ano, tipoMotor)
+        CHAMAR SUPER(modelo, ano)
+        SELF.tipoMotor ← tipoMotor
+
+    MÉTODO CalcularConsumo(km, eficiencia)
+        consumo ← km / eficiencia
+        ESCREVER "A moto consumiu ", consumo, " litros de combustível."
+FIM CLASSE
+
+// Exemplo de Uso:
+INICIO
+    carro1 ← NOVO Carro("Sedan X", 2023, 50)
+    moto1 ← NOVO Moto("Street 125", 2022, "125cc")
+
+    CHAMAR carro1.CalcularConsumo(500, 12)  // 500 km com eficiência de 12 km/l
+    CHAMAR moto1.CalcularConsumo(500, 30)   // 500 km com eficiência de 30 km/l
+FIM
+
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -258,6 +320,31 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+Resposta: <br>
+
+Função CalcularTempoPouso(velocidadeInicial, desaceleracao, velocidadeSegura, tempoMaximo):  
+    tempo <- 0  
+
+    # Enquanto a velocidade for maior que a velocidade segura e não ultrapassar o tempo máximo  
+    Enquanto velocidadeInicial > velocidadeSegura E tempo < tempoMaximo faça:  
+        tempo <- tempo + 1  
+        velocidadeInicial <- velocidadeInicial - desaceleracao  
+
+    # Verifica se a velocidade atingiu um nível seguro dentro do tempo máximo  
+    Se velocidadeInicial <= velocidadeSegura então:  
+        Retornar "Pouso seguro! Tempo necessário: " + tempo + " segundos."  
+    Senão:  
+        Retornar "Falha! O tempo máximo foi excedido antes de atingir uma velocidade segura."  
+
+### Exemplo de uso  
+velocidadeEntrada <- 5000   # Velocidade inicial em m/s  
+desaceleracao <- 100        # Redução de velocidade por segundo  
+velocidadeSegura <- 500     # Velocidade máxima segura para pouso  
+tempoMaximo <- 60           # Tempo máximo permitido para desaceleração  
+
+resultado <- CalcularTempoPouso(velocidadeEntrada, desaceleracao, velocidadeSegura, tempoMaximo)  
+Escrever(resultado)
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -290,3 +377,35 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
+
+Resposta: <br>
+
+Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
+    # Verifica se a multiplicação é possível (colunas de A = linhas de B)  
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:  
+        Retornar "As matrizes não podem ser multiplicadas. Dimensões incompatíveis."  
+
+    linhasA <- tamanho(matrizA)  
+    colunasA <- tamanho(matrizA[0])  
+    colunasB <- tamanho(matrizB[0])  
+
+    # Cria uma matriz resultado com dimensões adequadas  
+    matrizResultado <- novaMatriz(linhasA, colunasB, 0)  
+
+    # Loop para multiplicação de matrizes  
+    Para i de 0 até linhasA-1 faça:  
+        Para j de 0 até colunasB-1 faça:  
+            Para k de 0 até colunasA-1 faça:  
+                matrizResultado[i][j] <- matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])  
+
+    Retornar matrizResultado  
+
+### Exemplo de uso  
+investimentosAno1 <- [[1000, 2000], [1500, 2500]]  
+fatoresCrescimento <- [[1.1, 0.9], [0.8, 1.2]]  
+
+impactoInvestimentos <- MultiplicarMatrizesInvestimento(investimentosAno1, fatoresCrescimento)  
+
+Escrever("Impacto financeiro dos investimentos:")  
+ImprimirMatriz(impactoInvestimentos)  
+
